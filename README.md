@@ -29,9 +29,23 @@ HPL depends on BLAS or Intel MKL. We used the existing HPL on Tianhe-2 for our e
 #### **5)  Datasets:**
 The performance evaluation requires running the target application with and without FCR under various running scales. It’s necessary to adjust the corresponding parameters in the input files including problem size and running scales, as well as the content in submit script.
 ### **___C. Installation___**     
-Build a static library of FCR as libpdi.a and an executable named child.
+Build a static library of FCR as libpdi.a and an executable named child.    
       $ cd pdi/src    
-      $ ./make.sh     
+      $ ./make.sh 
+### **___D. Experiment workflow___**
+Taking the experiments of HPL as an example, the first step is to add FCR to HPL. Modify linpack/testing/ptest/ HPL_pddriver.c, linpack/src/comm/HPL_Send.c and HPL_Recv.c as Figure 4 described in this paper. Compiling the modified HPL code to generate an executable of HPL (with-FCR version).      
+      $ cp pdi/src/libpdi.a     linpack/lib/     
+      $ cp pdi/include/pdi.h    linpack/include/    
+      $ cd linpack/     
+      $ make arch=intel64     
+      $ cp pdi/src/child    linpack/bin/intel64    
+Create job.sh for submitting to Tianhe-2.     
+      #!/bin/sh     
+      yhrun –N 256 –n 5120 –exclusive –p bigdata ./xhpl      
+      
+
+
+
 
 
 
