@@ -5,7 +5,7 @@ A library implemented in the user level to provide supporting for failures disti
 ### **___A. Abstract___**     
 This artifact contains the code to build the FCR library and the information needed to launch some experiments in the paper “A Lightweight and Flexible Tool for Distinguishing between Hardware Malfunctions and Program Bugs in Debugging Large-scale Programs”. We explain how to compile and run the modified benchmarks used in Section IV.
 ### **___B. Description___**
-#### **___1)	Check-list (artifact meta information):___**
+#### **___ 1)	Check-list (artifact meta information): ___**
 
 
 
