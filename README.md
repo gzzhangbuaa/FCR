@@ -22,3 +22,7 @@ The corresponding API is PDI_FailureTest(int nodeID, int type),
 nodeID represents the node ID you specified where the failure occurs.
 through the type parameter to determine whether the failure you expected is caused
 by hardware or software errors.
+
+
+APPENDIX
+==========
