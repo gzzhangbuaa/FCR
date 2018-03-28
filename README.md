@@ -1,13 +1,13 @@
 # FCR
-a library implemented in the user level to provide supporting for failures distinguishing 
-(face to large-scale MPI applications)
-		Make sure your environment has installed the MPI implementation correctly.
-		cd /src
-    ./make.sh
-    A static library named libpdi.a is generated in the /lib path
-    pdi.h exists in /include fold
-    use libpdi.a and pdi.h to complete the program modification.
-
+a library implemented in the user level to provide supporting for failures distinguishing  
+(face to large-scale MPI applications)   
+		Make sure your environment has installed the MPI implementation correctly.   
+		cd /src   
+		./make.sh      
+    A static library named libpdi.a is generated in the /lib path   
+    pdi.h exists in /include fold     
+    use libpdi.a and pdi.h to complete the program modification.      
+    
 The three most important APIs are as follows
 #insert after the MPI call MPI_init()
 PDI_Init();
