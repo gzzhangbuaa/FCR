@@ -40,8 +40,8 @@ Taking the experiments of HPL as an example, the first step is to add FCR to HPL
       $ make arch=intel64     
       $ cp pdi/src/child    linpack/bin/intel64    
 Create job.sh for submitting to Tianhe-2.     
-            #!/bin/sh     
-            yhrun –N 256 –n 5120 –exclusive –p bigdata ./xhpl      
+                  #!/bin/sh     
+                  yhrun –N 256 –n 5120 –exclusive –p bigdata ./xhpl      
       
 
 
