@@ -18,7 +18,13 @@ This artifact contains the code to build the FCR library and the information nee
 **•	Publicly available?:** Yes.   
 
 #### **2)	How delivered:**    
-      HPL, HPCG and HPCC are open- source benchmarks, you can get them in the following URLs separately:   
+      HPL, HPCG and HPCC are open- source benchmarks, you can get them in the following URLs separately: 
+      http://www.netlib.org/benchmark/hpl/.    
+      http://www.hpcg-benchmark.org/        
+      http://icl.cs.utk.edu/hpcc/    
+      
+      
+
       
 
 
