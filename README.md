@@ -42,6 +42,11 @@ Taking the experiments of HPL as an example, the first step is to add FCR to HPL
 Create job.sh for submitting to Tianhe-2.     
       #!/bin/sh     
       yhrun –N 256 –n 5120 –exclusive –p bigdata ./xhpl      
+### **___E. Evaluation and expected result___**
+#### **1) Effectiveness: **      
+For evaluating the effectiveness of FCR, we choose to emulate hardware malfunctions by stopping all the processes belong to the target execution on a certain computing node, and simulate software bugs by stopping certain MPI process to cause program hanging. The above failure injections have been implemented in FCR, you can inject the failure anywhere in the program with function call PDI_FailureTest(int nodeID, int type) before compilation. The first parameter nodeID represents the node you want the failure occur, and the second parameter represents the failure type such as hardware (PDI_TYPE_HFAIL) and software (PDI_TYPE_SFAIL).      
+Determine the problem size and the running scale you want to evaluate, update the input file of HPL.
+
       
       
 
