@@ -58,17 +58,18 @@ We use the same running scale, problem size and process number per node to evalu
       *___suspect.log___*	Each entry represents a record of suspicious event.     
       *___nstatus.log___*	The hardware status of all nodes participated in the execution at the failure point.     
 ### **___F. Experiment customization___**     
-Before running the experiment, one should determine the execution parameters, and adjust the configuration file correspondingly. For example, to perform HPL on 256 nodes, each node with 16 processes and each process takes 80% memory occupancy, one should adjust the HPL.dat file as follows.
-      line 6    80000    Ns
-      line 11   256       Ps
-      line 12    16        Qs
-Then modify job.sh as follows:
-      #!/bin/sh
-      yhrun –N 256 –n 4096 –exclusive –p bigdata ./xhpl
-Finally, submit this job to the Tianhe-2 supercomputer:
-      $ cd linpack/bin/intel64
-      $ yhbatch –N 256 –n 4096 –p bigdata job.sh
-### **___G. Notes___**
+Before running the experiment, one should determine the execution parameters, and adjust the configuration file correspondingly. For example, to perform HPL on 256 nodes, each node with 16 processes and each process takes 80% memory occupancy, one should adjust the HPL.dat file as follows.      
+      line 6    80000    Ns     
+      line 11   256       Ps      
+      line 12    16        Qs      
+Then modify job.sh as follows:      
+      #!/bin/sh       
+      yhrun –N 256 –n 4096 –exclusive –p bigdata ./xhpl        
+Finally, submit this job to the Tianhe-2 supercomputer:        
+      $ cd linpack/bin/intel64        
+      $ yhbatch –N 256 –n 4096 –p bigdata job.sh        
+      
+### **___G. Notes___**       
 We take the experiments of HPL as an example to illustrate how to compile and run the program with FCR. The experiments with the rest of the benchmarks follows the similar steps. It is necessary to adjust the makefile of benchmarks in order to compile with FCR library and generate the executables.
 
 
