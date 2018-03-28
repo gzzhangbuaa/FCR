@@ -17,6 +17,10 @@ This artifact contains the code to build the FCR library and the information nee
 **•	Experiment customization:** modify the benchmarks by adding FCR library calls and simulating hardware malfunctions or software bugs, modify configure file for running at different scales    
 **•	Publicly available?:** Yes.   
 
+#### **2)	How delivered:**    
+      HPL, HPCG and HPCC are open- source benchmarks, you can get them in the following URLs separately:   
+      
+
 
 
 
