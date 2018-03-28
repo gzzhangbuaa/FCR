@@ -19,9 +19,16 @@ This artifact contains the code to build the FCR library and the information nee
 
 #### **2)	How delivered:**    
       HPL, HPCG and HPCC are open- source benchmarks, you can get them in the following URLs separately: 
-      http://www.netlib.org/benchmark/hpl/.    
+      http://www.netlib.org/benchmark/hpl/    
       http://www.hpcg-benchmark.org/        
-      http://icl.cs.utk.edu/hpcc/    
+      http://icl.cs.utk.edu/hpcc/   
+#### **3)  Hardware dependencies:**     
+We used Tianhe-2 supercomputer for performance evaluation and functional verification.      
+#### **4)  Software dependencies:**
+HPL depends on BLAS or Intel MKL. We used the existing HPL on Tianhe-2 for our experiments in Section IV, which uses Intel MKL as its math library.
+#### **5)  Datasets:**
+The performance evaluation requires running the target application with and without FCR under various running scales. It’s necessary to adjust the corresponding parameters in the input files including problem size and running scales, as well as the content in submit script.
+
       
       
 
